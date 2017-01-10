@@ -1,13 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
+import Routes from './config/routes'
 
-const HelloWorld = () => (
-  <span>
-    Hello World
-  </span>
-)
-
-ReactDOM.render(
-  <HelloWorld />,
+render(
+  Routes,
   document.getElementById('app')
 )
