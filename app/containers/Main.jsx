@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
+import NavMenuContainer from './NavMenuContainer'
 
-const HelloWorld = () => (
-  <span>
-    Hello World
-  </span>
+const styles = {
+  container: {
+    width: '100%',
+    height: '100%'
+  }
+}
+
+const Main = (props) => (
+  <div style={styles.container}>
+    <NavMenuContainer />
+    {props.children}
+  </div>
 )
 
-export default HelloWorld
+Main.propTypes = {
+  children: PropTypes.number.isRequired,
+}
+
+export default Main

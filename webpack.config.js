@@ -5,7 +5,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 const config = {
   entry: [
-    "./app/main.jsx"
+    "./app/index.jsx"
   ],
   output: {
     path: __dirname + '/dist',

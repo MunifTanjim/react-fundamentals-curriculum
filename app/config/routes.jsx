@@ -1,9 +1,12 @@
 import React from 'react'
-import { Router, Route, hashHistory } from 'react-router'
+import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 import Main from '../containers/Main'
+import Home from '../components/Home'
 
 export default (
   <Router history={hashHistory}>
-    <Route path='/' component={Main} />
+    <Route path='/' component={Main}>
+      <IndexRoute component={Home} />
+    </Route>
   </Router>
 )
