@@ -1,7 +1,16 @@
 import React from 'react'
+import GetPlace from './GetPlace'
+
+const styles = {
+  formStyle: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  formClass: 'form-inline'
+}
 
 const NavMenu = () => (
-<h2 style={{margin:0}}>What the Weather!</h2>
+  <GetPlace formStyle={styles.formStyle} formClass={styles.formClass}/>
 )
 
 export default NavMenu
