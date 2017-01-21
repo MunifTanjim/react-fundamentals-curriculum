@@ -1,16 +1,15 @@
 import React from 'react'
-import GetPlace from './GetPlace'
+import GetPlaceContainer from '../containers/GetPlaceContainer'
 
 const styles = {
-  formStyle: {
+  form: {
     display: 'flex',
     alignItems: 'center'
-  },
-  formClass: 'form-inline'
+  }
 }
 
 const NavMenu = () => (
-  <GetPlace formStyle={styles.formStyle} formClass={styles.formClass}/>
+  <GetPlaceContainer formStyle={styles.form} />
 )
 
 export default NavMenu

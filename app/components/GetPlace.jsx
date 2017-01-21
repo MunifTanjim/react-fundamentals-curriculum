@@ -1,15 +1,28 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 
 const GetPlace = (props) => (
-  <form style={props.formStyle} className={props.formClass}>
-    <input type='text' placeholder='St. George, Utah' className='form-control' style={{width:'auto'}} />
-    <button type='submit' style={{margin:'8px'}} className='btn btn-success'>Get Weather</button>
+  <form onSubmit={props.onSubmitPlace} style={props.formStyle}>
+    <input
+      type='text'
+      placeholder='St. George, Utah'
+      className='form-control'
+      style={{width:'auto'}}
+      onChange={props.onUpdatePlace}
+      value= {props.place} />
+    <button
+      style={{margin:'8px'}}
+      className='btn btn-success'
+      type='submit'>
+      Get Weather
+    </button>
   </form>
 )
 
 GetPlace.propTypes = {
-  formStyle: React.PropTypes.object.isRequired,
-  formClass: React.PropTypes.string
+  formStyle: PropTypes.object.isRequired,
+  onSubmitPlace: PropTypes.func.isRequired,
+  onUpdatePlace: PropTypes.func.isRequired,
+  place: PropTypes.string.isRequired,
 }
 
 export default GetPlace

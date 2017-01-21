@@ -16,7 +16,7 @@ const Main = (props) => (
 )
 
 Main.propTypes = {
-  children: PropTypes.number.isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 export default Main

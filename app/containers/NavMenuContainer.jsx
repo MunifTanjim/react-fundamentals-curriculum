@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import NavMenu from '../components/NavMenu'
 
 const styles = {
-  navbar: {
+  nav: {
     height: '8%',
     backgroundColor: 'rgba(252, 90, 44, 0.890196)',
     display: 'flex',
@@ -21,7 +21,7 @@ export default class NavMenuContainer extends Component {
 
   render() {
     return (
-      <nav style={styles.navbar}>
+      <nav style={styles.nav}>
         <h2 style={styles.h2}>What the Weather!</h2>
         <NavMenu />
       </nav>
