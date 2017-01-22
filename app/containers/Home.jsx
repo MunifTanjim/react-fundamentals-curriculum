@@ -1,5 +1,5 @@
 import React from 'react'
-import GetPlaceContainer from '../containers/GetPlaceContainer'
+import GetPlaceContainer from './GetPlaceContainer'
 
 const styles = {
   main: {

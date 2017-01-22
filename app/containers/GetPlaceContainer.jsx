@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
+import { withRouter } from 'react-router'
 import GetPlace from '../components/GetPlace'
-import getWeather from '../helpers/api'
 
 const styles = {
   form: {
@@ -11,7 +11,7 @@ const styles = {
   }
 }
 
-export default class GetPlaceContainer extends Component {
+class GetPlaceContainer extends Component {
   constructor(props) {
     super(props)
     this.handleUpdatePlace = this.handleUpdatePlace.bind(this)
@@ -29,8 +29,11 @@ export default class GetPlaceContainer extends Component {
 
   handleSubmitPlace(e) {
     e.preventDefault()
-    getWeather.current(this.state.place)
-    getWeather.fiveDay(this.state.place)
+    let place = this.state.place
+    this.setState({
+      place: ''
+    })
+    this.props.router.push('/forecast/' + place)
   }
 
   render() {
@@ -49,5 +52,8 @@ GetPlaceContainer.defaultProps = {
 }
 
 GetPlaceContainer.propTypes = {
-  formStyle: React.PropTypes.object.isRequired
+  formStyle: PropTypes.object.isRequired,
+  router: PropTypes.object.isRequired
 }
+
+export default withRouter(GetPlaceContainer)
