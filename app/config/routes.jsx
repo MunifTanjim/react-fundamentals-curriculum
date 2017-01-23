@@ -8,7 +8,7 @@ export default (
   <Router history={hashHistory}>
     <Route path='/' component={Main}>
       <IndexRoute component={Home} />
-      <Route path='/forecast/:city' component={ForecastContainer} />
+      <Route path='forecast/:place' component={ForecastContainer} />
     </Route>
   </Router>
 )

@@ -11,16 +11,6 @@ function fiveDayForecast (cityName) {
 }
 
 export default {
-  current: function (cityName) {
-    return currentWeather(cityName)
-      .then((weather) => {
-        console.log('Current weather: ', weather.data)
-      })
-  },
-  fiveDay: function (cityName) {
-    return fiveDayForecast(cityName)
-      .then((forecast) => {
-        console.log('Five day forecast: ', forecast.data)
-      })
-  }
+  current: currentWeather,
+  fiveDay: fiveDayForecast
 }

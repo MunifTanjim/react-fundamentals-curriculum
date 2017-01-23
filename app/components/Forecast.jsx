@@ -1,11 +1,15 @@
 import React, { PropTypes } from 'react'
 
-const Forecast = (props) => (
-  <span>Forecast place: {props.place}</span>
-)
+const Forecast = (props) => {
+  console.log(props.currentWeather, props.fiveDayForecast)
+  return (
+    <div>Forecast component</div>
+  )
+}
 
 Forecast.propTypes = {
-  place: PropTypes.string.isRequired,
+  currentWeather: PropTypes.object.isRequired,
+  fiveDayForecast: PropTypes.object.isRequired
 }
 
 export default Forecast
