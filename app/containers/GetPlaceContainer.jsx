@@ -14,8 +14,7 @@ const styles = {
 class GetPlaceContainer extends Component {
   constructor(props) {
     super(props)
-    this.handleUpdatePlace = this.handleUpdatePlace.bind(this)
-    this.handleSubmitPlace = this.handleSubmitPlace.bind(this)
+
     this.state = {
       place: ''
     }
@@ -40,8 +39,8 @@ class GetPlaceContainer extends Component {
     return (
       <GetPlace
         formStyle={this.props.formStyle}
-        onSubmitPlace={this.handleSubmitPlace}
-        onUpdatePlace={this.handleUpdatePlace}
+        onSubmitPlace={this.handleSubmitPlace.bind(this)}
+        onUpdatePlace={this.handleUpdatePlace.bind(this)}
         place={this.state.place} />
     )
   }
