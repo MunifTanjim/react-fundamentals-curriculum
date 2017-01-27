@@ -7,6 +7,10 @@ body,
   height: 100%;
 }
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
 .loadingCubeSet {
   width: 73px;
   height: 73px;

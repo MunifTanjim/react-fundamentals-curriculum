@@ -7,11 +7,11 @@ class WeatherDetailContainer extends Component {
   }
 
   render() {
-    let { data } = this.props.location.state
+    let { data, place } = this.props.location.state
     return (
       <WeatherDetail
         data={data}
-        weather={data.weather[0]} />
+        place={place} />
     )
   }
 }

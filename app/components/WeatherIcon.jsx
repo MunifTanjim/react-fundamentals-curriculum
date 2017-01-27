@@ -3,7 +3,10 @@ import React, { PropTypes } from 'react'
 const Icon = (props) => {
   return (
     <div>
-      <img src={'../app/images/icons/' + props.data.icon + '.svg'} alt={`Weather - ${props.data.main}`} style={styles.img} />
+      <img
+        src={'../app/images/icons/' + props.data.icon + '.svg'}
+        alt={`Weather - ${props.data.main}`}
+        style={styles.img} />
       {props.desc && <p style={styles.desc}>{props.data.description}</p>}
     </div>
 )}
@@ -17,11 +20,11 @@ export default Icon
 
 const styles = {
   desc: {
-    fontSize: '2em'
+    textAlign: 'center',
   },
   img: {
-    width: '12em',
-    height: '12em',
-    margin: '1em'
+    width: '12rem',
+    height: '12rem',
+    margin: '1rem'
   }
 }

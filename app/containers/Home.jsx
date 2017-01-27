@@ -1,8 +1,19 @@
 import React from 'react'
 import GetPlaceContainer from './GetPlaceContainer'
 
+const Home = () => (
+  <main style={styles.container}>
+    <section style={styles.section}>
+      <h1 style={styles.h1}>Enter a City or State</h1>
+      <GetPlaceContainer />
+    </section>
+  </main>
+)
+
+export default Home
+
 const styles = {
-  main: {
+  container: {
     backgroundSize: 'cover',
     backgroundImage: "url('../app/images/pattern.svg')",
     width: '100%',
@@ -19,14 +30,3 @@ const styles = {
     color: '#fff'
   }
 }
-
-const Home = () => (
-  <main style={styles.main}>
-    <section style={styles.section}>
-      <h1 style={styles.h1}>Enter a City or State</h1>
-      <GetPlaceContainer />
-    </section>
-  </main>
-)
-
-export default Home

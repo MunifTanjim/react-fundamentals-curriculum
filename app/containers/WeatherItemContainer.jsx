@@ -11,7 +11,8 @@ class WeatherItemContainer extends Component {
     this.props.router.push({
       pathname: '/detail/' + this.props.params.place,
       state: {
-        data: this.props.data
+        data: this.props.data,
+        place: this.props.place
       }
     })
   }
@@ -19,6 +20,7 @@ class WeatherItemContainer extends Component {
   render() {
     return (this.props.current) ? (
       <WeatherItem
+        data={this.props.data.main}
         weather={this.props.data.weather[0]}
         current />
     ) : (
@@ -33,6 +35,7 @@ class WeatherItemContainer extends Component {
 WeatherItemContainer.propTypes = {
   current: PropTypes.bool,
   data: PropTypes.object.isRequired,
+  place: PropTypes.string,
   router: PropTypes.object.isRequired,
   params: PropTypes.object.isRequired,
 }

@@ -2,19 +2,9 @@ import React, { Component, PropTypes } from 'react'
 import { withRouter } from 'react-router'
 import GetPlace from '../components/GetPlace'
 
-const styles = {
-  form: {
-    display: 'flex',
-    flexFlow: 'column nowrap',
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-}
-
 class GetPlaceContainer extends Component {
   constructor(props) {
     super(props)
-
     this.state = {
       place: ''
     }
@@ -42,13 +32,22 @@ class GetPlaceContainer extends Component {
   }
 }
 
-GetPlaceContainer.defaultProps = {
-  formStyle: styles.form
-}
-
 GetPlaceContainer.propTypes = {
   formStyle: PropTypes.object.isRequired,
   router: PropTypes.object.isRequired
 }
 
 export default withRouter(GetPlaceContainer)
+
+const styles = {
+  form: {
+    display: 'flex',
+    flexFlow: 'column nowrap',
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+}
+
+GetPlaceContainer.defaultProps = {
+  formStyle: styles.form
+}

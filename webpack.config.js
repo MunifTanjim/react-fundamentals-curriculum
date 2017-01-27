@@ -1,3 +1,10 @@
+const webpack = require('webpack')
+const ProcessEnvPlugin = new webpack.DefinePlugin({
+  'process.env': {
+    NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+  }
+})
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/app/index.html',
@@ -22,6 +29,7 @@ const config = {
     }]
   },
   plugins: [
+    ProcessEnvPlugin,
     HtmlWebpackPluginConfig
   ]
 };

@@ -5,21 +5,21 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server",
-    "bundle": "webpack -p"
+    "build": "NODE_ENV=production webpack -p",
+    "publish": "./publish.sh what-the-weather"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MunifTanjim/react-fundamentals-curriculum.git"
   },
+  "homepage": "http://what-the-weather.surge.sh",
   "author": "Munif Tanjim (https://muniftanjim.com)",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.15.3",
-    "html-webpack-plugin": "^2.26.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-router": "^3.0.0",
-    "webpack-dev-server": "^1.16.2"
+    "react-router": "^3.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
@@ -29,6 +29,8 @@
     "babel-preset-react": "^6.16.0",
     "eslint": "^3.13.1",
     "eslint-plugin-react": "^6.9.0",
-    "webpack": "^1.14.0"
+    "html-webpack-plugin": "^2.26.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
   }
 }
