@@ -3,25 +3,26 @@ import Icon from '../components/WeatherIcon'
 import get from '../helpers/utils'
 
 const WeatherItem = (props) => {
-  if (props.current)
     return (
-      <section>
-        <Icon data={props.data.weather[0]} />
-      </section>
-    )
-  else
-    return (
-      <section style={styles.forecastDay}>
-        <Icon data={props.data.weather[0]} />
-        <h2>{get.date(props.date)}</h2>
-      </section>
+      (props.current) ? (
+        <section>
+          <Icon data={props.weather} desc />
+        </section>
+      ) : (
+        <section style={styles.forecastDay}
+          onClick={props.onClick} >
+          <Icon data={props.weather} />
+          <h2>{get.date(props.date)}</h2>
+        </section>
+      )
     )
 }
 
 WeatherItem.propTypes = {
   current: PropTypes.bool,
-  data: PropTypes.object.isRequired,
-  date: PropTypes.number.isRequired,
+  date: PropTypes.number,
+  weather: PropTypes.object.isRequired,
+  onClick: PropTypes.func,
 }
 
 export default WeatherItem

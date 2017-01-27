@@ -23,7 +23,7 @@ export default class ForecastContainer extends Component {
           currentLoaded: true
         })
       })
-    
+
     getWeather.fiveDay(this.place)
       .then((forecast) => {
         this.setState({
@@ -32,7 +32,6 @@ export default class ForecastContainer extends Component {
         })
       })
   }
-
 
   render() {
     return (

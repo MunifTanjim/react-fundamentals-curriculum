@@ -28,11 +28,7 @@ class GetPlaceContainer extends Component {
 
   handleSubmitPlace(e) {
     e.preventDefault()
-    let place = this.state.place
-    this.setState({
-      place: ''
-    })
-    this.props.router.push('/forecast/' + place)
+    this.props.router.push('/forecast/' + this.state.place)
   }
 
   render() {

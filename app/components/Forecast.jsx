@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import WeatherItem from '../components/WeatherItem'
+import WeatherItemContainer from '../containers/WeatherItemContainer'
 
 const styles = {
   main: {
@@ -23,22 +23,19 @@ const styles = {
 
 const Forecast = (props) => {
   let { name } = props.currentWeather
-  console.log(props.currentWeather, props.fiveDayForecast)
   return (
     <main style={styles.main}>
       <h1>{name}</h1>
       <div id='current-weather' style={styles.current}>
-        <WeatherItem
-          date={props.currentWeather.dt}
+        <WeatherItemContainer
           data={props.currentWeather}
           current />
       </div>
       <div id='forecast' style={styles.forecast}>
         <h3 style={styles.h3}>Select a day</h3>
         {props.fiveDayForecast.list.map((day) => (
-          <WeatherItem
+          <WeatherItemContainer
             key={day.dt}
-            date={day.dt}
             data={day} />
         ))}
       </div>
